@@ -22,6 +22,37 @@ struct QAview: View {
                 .frame(width: 100, height: 6)
         })
         .padding([.leading,.trailing,.top],10)
+        
+        //MARK: Correct and Wrong count....
+        HStack{
+            Label(
+             //   title: { Text(correct == 0 ? "" : "\(correct)")
+                title : { ( Text("1"))
+                        .font(.largeTitle)
+                        .foregroundColor(Color.black)
+                },
+                icon: {Image(systemName: "checkmark.circle")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.green)
+                })
+            
+            Spacer()
+            
+            Label(
+             //   title: { Text(wrong == 0 ? "" : "\(wrong)")
+                 title : { ( Text("1"))
+                        .font(.largeTitle)
+                        .foregroundColor(Color.black)
+                },
+                icon: {Image(systemName: "xmark.circle")
+                        .font(.largeTitle)
+                        .foregroundColor(Color.red)
+                })
+            
+        }
+        .padding([.leading,.trailing,.top],10)
+        
+        
             Spacer(minLength: 0)
         
     }
