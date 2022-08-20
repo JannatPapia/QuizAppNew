@@ -12,6 +12,7 @@
 		37911F4028B101AB006B8A8D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37911F3F28B101AB006B8A8D /* Assets.xcassets */; };
 		37911F4328B101AB006B8A8D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37911F4228B101AB006B8A8D /* Preview Assets.xcassets */; };
 		37911F4C28B101F3006B8A8D /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37911F4B28B101F3006B8A8D /* HomeView.swift */; };
+		37911F4E28B12B94006B8A8D /* QAview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37911F4D28B12B94006B8A8D /* QAview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		37911F3F28B101AB006B8A8D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37911F4228B101AB006B8A8D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		37911F4B28B101F3006B8A8D /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		37911F4D28B12B94006B8A8D /* QAview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			isa = PBXGroup;
 			children = (
 				37911F4B28B101F3006B8A8D /* HomeView.swift */,
+				37911F4D28B12B94006B8A8D /* QAview.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -156,6 +159,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37911F4E28B12B94006B8A8D /* QAview.swift in Sources */,
 				37911F4C28B101F3006B8A8D /* HomeView.swift in Sources */,
 				37911F3E28B101A8006B8A8D /* ContentView.swift in Sources */,
 				37911F3C28B101A8006B8A8D /* QuizAppNewApp.swift in Sources */,

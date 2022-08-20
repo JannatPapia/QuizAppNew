@@ -8,6 +8,11 @@
 import SwiftUI
 
 struct HomeView: View {
+    
+    @State var show = false
+ // Storing level for fetching questions....
+    @State var set = "Round_1"
+    
     var body: some View {
         VStack{
             // MARK: Title....
@@ -50,12 +55,21 @@ struct HomeView: View {
                                                 .frame(maxWidth: .infinity)
                                                 .background(Color.white)
                                                 .cornerRadius(15)
+                      
+                      //MARK: opening QA view as sheet
+                                                .onTapGesture(perform:  {
+                                                    set = "Round_\(index)"
+                                                    show.toggle()
+                                                })
                   }
                   })
               .padding()
               Spacer(minLength: 0)
         }
         .background(Color.black.opacity(0.05))
+        .sheet(isPresented: $show, content: {
+                  QAview()
+              })
         .ignoresSafeArea()
     }
 }
