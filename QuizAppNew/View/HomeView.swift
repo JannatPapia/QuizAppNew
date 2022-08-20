@@ -23,12 +23,45 @@ struct HomeView: View {
                 .foregroundColor(Color.black)
                 .padding(.top, 8)
                 .multilineTextAlignment(.center)
+            
+            Spacer(minLength: 0)
+            
+            //MARK: Level View...
+            
+            //MARK: Level view...
+              LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 35, content: {
+                  //MARK: four levels..
+                  ForEach(1...4,id:\.self){ index in
+                      VStack(spacing: 15) {
+                          Image("lv\(index)")
+                              .resizable()
+                              .aspectRatio(contentMode: .fit)
+                              .frame(height: 150)
+                          
+                          Text("SwiftUI Quiz")
+                              .font(.title2)
+                              .fontWeight(.heavy)
+                              .foregroundColor(Color.black)
+//                     //     Text("LEVEL \(index + 1)")
+                          Text("LEVEL \(index)")
+                              .foregroundColor(Color.black)
+                      }
+                                                .padding()
+                                                .frame(maxWidth: .infinity)
+                                                .background(Color.white)
+                                                .cornerRadius(15)
+                  }
+                  })
+              .padding()
+              Spacer(minLength: 0)
         }
+        .background(Color.black.opacity(0.05))
+        .ignoresSafeArea()
     }
 }
 
-struct HomeView_Previews: PreviewProvider {
-    static var previews: some View {
-        HomeView()
-    }
-}
+//struct HomeView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        HomeView()
+//    }
+//}
