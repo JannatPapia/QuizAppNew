@@ -13,6 +13,11 @@ struct HomeView: View {
  // Storing level for fetching questions....
     @State var set = "Round_1"
     
+    // for analytices.....
+    @State var correct: Int = 0
+    @State var wrong: Int = 0
+    @State var answered: Int = 0
+    
     var body: some View {
         VStack{
             // MARK: Title....
@@ -68,7 +73,7 @@ struct HomeView: View {
         }
         .background(Color.black.opacity(0.05))
         .sheet(isPresented: $show, content: {
-                  QAview()
+                  QAview(correct: $correct, wrong: $wrong)
               })
         .ignoresSafeArea()
     }
