@@ -12,6 +12,8 @@ struct QAview: View {
     //outgoing
     @Binding var correct: Int
     @Binding var wrong: Int
+    @Binding var answered: Int
+    var set : String
 //    @State var answered: Int = 0
     var body: some View {
        // IMPORTANT: Top progress view.....
@@ -56,6 +58,14 @@ struct QAview: View {
         }
         .padding([.leading,.trailing,.top],10)
         
+        
+        
+        ZStack{
+            ForEach("Nazmul hasan".reversed().indices) { index in
+                //View
+            }
+        }
+        .padding()
         
             Spacer(minLength: 0)
         

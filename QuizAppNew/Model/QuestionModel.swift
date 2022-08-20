@@ -7,7 +7,10 @@
 
 import SwiftUI
 
+//MARK: Codeble Model....
+
 struct Qustion:Identifiable, Codable {
+    // It will fetch data
     var id: String { UUID().uuidString }
     var question : String = ""
     var optionA : String  = ""
@@ -16,6 +19,8 @@ struct Qustion:Identifiable, Codable {
     var optionD : String  = ""
     var answer: String  = ""
     var sl : Int?
+    
+    //declare the codin keys with json
     
     enum CodingKeys: String, CodingKey {
          case question = "question"
@@ -26,7 +31,7 @@ struct Qustion:Identifiable, Codable {
          case answer = "answer"
      }
     
- 
+ // For checking
     var isSubmitted = false
     var completed = false
 }
