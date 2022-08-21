@@ -14,8 +14,17 @@ struct QAview: View {
     @Binding var wrong: Int
     @Binding var answered: Int
     var set : String
+    @State var data = Qustion()
+    
 //    @State var answered: Int = 0
     var body: some View {
+        
+        ZStack {
+            
+            if data.question.isEmpty{
+                ProgressView()
+            }
+            else {
        // IMPORTANT: Top progress view.....
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                content: {
@@ -62,13 +71,20 @@ struct QAview: View {
         
         ZStack{
             ForEach("Nazmul hasan".reversed().indices) { index in
-                //View
+                //View .....
+                
+    //            QuestionView( correct: $correct, wrong: $wrong, answered: $answered)
             }
         }
         .padding()
         
             Spacer(minLength: 0)
-        
+            }
+    }
+        // MARK: fetching......
+        .onAppear(perform: {
+            data.question
+        })
     }
 }
 
