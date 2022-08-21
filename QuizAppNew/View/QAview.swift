@@ -9,8 +9,12 @@ import SwiftUI
 
 //MARK: Question Answer view
 struct QAview: View {
+    @State var isSubmitted = false
     @Environment(\.presentationMode) var present
     var body: some View {
+        if isSubmitted {
+            ResultView()
+        } else {
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                content: {
             Capsule()
@@ -49,19 +53,6 @@ struct QAview: View {
                 })
         }
         
-//        Button(action: {
-//            // closing sheet....
-//            present.wrappedValue.dismiss()
-//        }, label: {
-//            Text("GoTo Home")
-//                .fontWeight(.heavy)
-//                .foregroundColor(.white)
-//                .padding(.vertical)
-//                .frame(width: UIScreen.main.bounds.width - 150)
-//                .background(Color.blue)
-//                .cornerRadius(15)
-//        })
-        
         .padding([.leading,.trailing,.top],10)
         ZStack{
             ForEach("Nazmul hasan".reversed().indices) { index in
@@ -70,6 +61,7 @@ struct QAview: View {
         }
         .padding()
         Spacer(minLength: 0)
+            
     }
 }
-
+}

@@ -10,8 +10,7 @@ import SwiftUI
 struct HomeView: View {
     @State var show = false
     var body: some View {
-    //    ScrollView {
-            ZStack {
+        ZStack {
         VStack{
             // MARK: Title....
             Text("Revel Station")
