@@ -9,9 +9,7 @@ import SwiftUI
 
 //MARK: Question Answer view
 struct QAview: View {
- 
     var body: some View {
-
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                content: {
             Capsule()
@@ -23,12 +21,14 @@ struct QAview: View {
                 .frame(width: 100, height: 6)
         })
         .padding([.leading,.trailing,.top],10)
-        //MARK: Correct and Wrong count....
+        
+        //MARK: Correct and Wrong count......
+        
         HStack{
             Label(
                 title : { ( Text("1"))
-                        .font(.largeTitle)
-                        .foregroundColor(Color.black)
+                    .font(.largeTitle)
+                    .foregroundColor(Color.black)
                 },
                 icon: {Image(systemName: "checkmark.circle")
                         .font(.largeTitle)
@@ -38,29 +38,23 @@ struct QAview: View {
             Spacer()
             
             Label(
-                 title : { ( Text("1"))
-                        .font(.largeTitle)
-                        .foregroundColor(Color.black)
+                title : { ( Text("1"))
+                    .font(.largeTitle)
+                    .foregroundColor(Color.black)
                 },
                 icon: {Image(systemName: "xmark.circle")
                         .font(.largeTitle)
                         .foregroundColor(Color.red)
                 })
-            
         }
         .padding([.leading,.trailing,.top],10)
-        
-        
-        
         ZStack{
             ForEach("Nazmul hasan".reversed().indices) { index in
-
+                
             }
         }
         .padding()
-        
-            Spacer(minLength: 0)
-
+        Spacer(minLength: 0)
     }
 }
 

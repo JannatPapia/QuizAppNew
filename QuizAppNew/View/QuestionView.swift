@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
-
+    
     
     var body: some View {
         VStack(spacing: 22){
@@ -20,7 +20,7 @@ struct QuestionView: View {
                 .padding(.top, 25)
             
             Spacer(minLength: 0)
-       
+            
             Button(action: {}, label: {
                 Text("question.optionA")
                     .foregroundColor(Color.black)
@@ -59,7 +59,7 @@ struct QuestionView: View {
             
             
             HStack(spacing: 15) {
-                                
+                
                 Button(action: {}, label: {
                     Text("Submit")
                         .fontWeight(.heavy)
@@ -75,7 +75,7 @@ struct QuestionView: View {
                 
                 Button(action: {
                     withAnimation{
-
+                        
                     }
                 }, label: {
                     Text("Next")
@@ -97,4 +97,4 @@ struct QuestionView: View {
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
     }
 }
- 
+
