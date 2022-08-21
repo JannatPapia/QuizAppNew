@@ -10,7 +10,7 @@ import SwiftUI
 struct ResultView: View {
     var body: some View {
         VStack(spacing: 25){
-            Image("lv1")
+            Image("trophy")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 250, height: 250)
@@ -38,7 +38,7 @@ struct ResultView: View {
                 Text("1")
                     .font(.largeTitle)
                     .foregroundColor(.black)
-                
+            }
                 Button(action: {}, label: {
                     Text("GoTo Home")
                         .fontWeight(.heavy)
@@ -49,7 +49,7 @@ struct ResultView: View {
                         .cornerRadius(15)
                 })
             }
-        }
+  //      }
     }
 }
 

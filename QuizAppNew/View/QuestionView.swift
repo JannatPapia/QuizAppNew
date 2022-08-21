@@ -8,8 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
-    
-    
+    @State var showLoginView: Bool = false
     var body: some View {
         VStack(spacing: 22){
             // FOR QUESTION....
@@ -40,9 +39,9 @@ struct QuestionView: View {
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
                     .background(
-                RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.black.opacity(0.5), lineWidth: 1)
-            )
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black.opacity(0.5), lineWidth: 1)
+                    )
             })
             
             //FOR OPTIONS....C
@@ -53,9 +52,9 @@ struct QuestionView: View {
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
                     .background(
-                RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.black.opacity(0.5), lineWidth: 1)
-            )
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black.opacity(0.5), lineWidth: 1)
+                    )
             })
             
             //FOR OPTIONS....D
@@ -66,17 +65,18 @@ struct QuestionView: View {
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
                     .background(
-                RoundedRectangle(cornerRadius: 15)
-                    .stroke(Color.black.opacity(0.5), lineWidth: 1)
-            )
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black.opacity(0.5), lineWidth: 1)
+                    )
             })
             
             Spacer(minLength: 0)
             
-            
             HStack(spacing: 15) {
                 
-                Button(action: {}, label: {
+                Button(action: {
+                    self.showLoginView.toggle()
+                }) {
                     Text("Submit")
                         .fontWeight(.heavy)
                         .foregroundColor(.white)
@@ -84,8 +84,25 @@ struct QuestionView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.blue)
                         .cornerRadius(15)
-                })
-                
+                }.sheet(isPresented: $showLoginView) {
+                    ResultView()
+                }
+                //                Button("Submit") {
+                //                          self.showLoginView = true
+                //                      }
+                //                .sheet(isPresented: $showLoginView, content: {
+                //                          ResultView()
+                //                      })
+                //           //     Text("Submit")                
+                //                    Button(action: {self.showLoginView = true}, label: {
+                //                    Text("Submit")
+                //                        .fontWeight(.heavy)
+                //                        .foregroundColor(.white)
+                //                        .padding(.vertical)
+                //                        .frame(maxWidth: .infinity)
+                //                        .background(Color.blue)
+                //                        .cornerRadius(15)
+                //                    })
                 // For next question Button....
                 
                 Button(action: {
@@ -101,7 +118,9 @@ struct QuestionView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                 })
+                
             }
+            
             .padding(.bottom)
             
         }

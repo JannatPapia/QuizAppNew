@@ -51,8 +51,6 @@ struct QAview: View {
         ZStack{
             ForEach("Nazmul hasan".reversed().indices) { index in
                 QuestionView()
-//                    .offset(x: viewModel.questions[index].completed ? 1000 : 0)
-//                    .rotationEffect(.init(degrees: viewModel.questions[index].completed ? 10 : 0))
             }
         }
         .padding()
