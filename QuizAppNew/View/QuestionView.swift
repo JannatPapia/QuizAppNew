@@ -10,7 +10,7 @@ import SwiftUI
 struct QuestionView: View {
     @State var showLoginView: Bool = false
     var body: some View {
-        VStack(spacing: 22){
+                VStack(spacing: 22){
             // FOR QUESTION....
             Text("Why?")
                 .font(.title2)
@@ -73,7 +73,6 @@ struct QuestionView: View {
             Spacer(minLength: 0)
             
             HStack(spacing: 15) {
-                
                 Button(action: {
                     self.showLoginView.toggle()
                 }) {
@@ -87,6 +86,43 @@ struct QuestionView: View {
                 }.sheet(isPresented: $showLoginView) {
                     ResultView()
                 }
+//
+//                if showLoginView  {
+//                              ResultView()
+//                          } else {
+////                              Button(action: {
+////                                  self.showLoginView = true
+////                              }) {
+////                                  Text("Submit")
+////                                      .fontWeight(.heavy)
+////                                      .foregroundColor(.white)
+////                                      .padding(.vertical)
+////                                      .frame(maxWidth: .infinity)
+////                                      .background(Color.blue)
+////                                      .cornerRadius(15)
+////                              }
+//
+//                              Button("submit") {
+//                                  self.showLoginView.toggle()
+//                              }
+//                          }
+                
+                /* ---------
+                Button(action: {
+                    self.showLoginView.toggle()
+                }) {
+                    Text("Submit")
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(maxWidth: .infinity)
+                        .background(Color.blue)
+                        .cornerRadius(15)
+                }.sheet(isPresented: $showLoginView) {
+                    ResultView()
+                }
+                 ----------- */
+                
                 //                Button("Submit") {
                 //                          self.showLoginView = true
                 //                      }
@@ -94,15 +130,16 @@ struct QuestionView: View {
                 //                          ResultView()
                 //                      })
                 //           //     Text("Submit")                
-                //                    Button(action: {self.showLoginView = true}, label: {
-                //                    Text("Submit")
-                //                        .fontWeight(.heavy)
-                //                        .foregroundColor(.white)
-                //                        .padding(.vertical)
-                //                        .frame(maxWidth: .infinity)
-                //                        .background(Color.blue)
-                //                        .cornerRadius(15)
-                //                    })
+//                Button(action: {}, label: {
+//                                    Text("Submit")
+//                                        .fontWeight(.heavy)
+//                                        .foregroundColor(.white)
+//                                        .padding(.vertical)
+//                                        .frame(maxWidth: .infinity)
+//                                        .background(Color.blue)
+//                                        .cornerRadius(15)
+//                                    })
+//                          }
                 // For next question Button....
                 
                 Button(action: {
@@ -119,16 +156,16 @@ struct QuestionView: View {
                         .cornerRadius(15)
                 })
                 
-            }
+                          
             
             .padding(.bottom)
-            
         }
+                }
         .padding()
         .background(Color.white)
         .cornerRadius(25)
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: 5, y: 5)
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
-    }
+    
 }
-
+}

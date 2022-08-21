@@ -59,10 +59,12 @@ struct HomeView: View {
             Spacer(minLength: 0)
         }
         .background(Color.black.opacity(0.05).ignoresSafeArea())
-      //  .ignoresSafeArea()
-        .sheet(isPresented: $show, content: {
-            QAview()
-        })
+        .fullScreenCover(isPresented: $show, content: {
+                            QAview()
+                        })
+//        .sheet(isPresented: $show, content: {
+//            QAview()
+//        })
     }
 //}
 }
