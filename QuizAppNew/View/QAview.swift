@@ -8,22 +8,9 @@
 import SwiftUI
 
 //MARK: Question Answer view
+
 struct QAview: View {
-    //outgoing
-//    @Binding var correct: Int
-//    @Binding var wrong: Int
-//    @Binding var answered: Int
-//    var set : String
-    
-//    @State var answered: Int = 0
     var body: some View {
-        
-      //  ZStack {
-            
-//            if data.question.isEmpty{
-//                ProgressView()
-//            }
-          //  else {
        // IMPORTANT: Top progress view.....
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                content: {
@@ -38,9 +25,9 @@ struct QAview: View {
         .padding([.leading,.trailing,.top],10)
         
         //MARK: Correct and Wrong count....
+        
         HStack{
             Label(
-            //   title: { Text(correct == 0 ? "" : "\(correct)")
                 title : { ( Text("1"))
                         .font(.largeTitle)
                         .foregroundColor(Color.black)
@@ -53,7 +40,6 @@ struct QAview: View {
             Spacer()
             
             Label(
-             //   title: { Text(wrong == 0 ? "" : "\(wrong)")
                  title : { ( Text("1"))
                         .font(.largeTitle)
                         .foregroundColor(Color.black)
@@ -76,19 +62,11 @@ struct QAview: View {
             }
         }
         .padding()
-        
             Spacer(minLength: 0)
-       //     }
-  //  }
+        
         // MARK: fetching......
-//        .onAppear(perform: {
-//            data.question
-//        })
+
     }
 }
 
-//struct QAview_Previews: PreviewProvider {
-//    static var previews: some View {
-//        QAview()
-//    }
-//}
+
