@@ -38,6 +38,16 @@ struct ResultView: View {
                 Text("1")
                     .font(.largeTitle)
                     .foregroundColor(.black)
+                
+                Button(action: {}, label: {
+                    Text("GoTo Home")
+                        .fontWeight(.heavy)
+                        .foregroundColor(.white)
+                        .padding(.vertical)
+                        .frame(width: UIScreen.main.bounds.width - 150)
+                        .background(Color.blue)
+                        .cornerRadius(15)
+                })
             }
         }
     }
