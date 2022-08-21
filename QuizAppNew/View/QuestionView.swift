@@ -26,6 +26,10 @@ struct QuestionView: View {
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
+                    .background(
+                        RoundedRectangle(cornerRadius: 15)
+                            .stroke(Color.black.opacity(0.5), lineWidth: 1)
+                    )
             })
             
             //FOR OPTIONS....B
@@ -35,6 +39,10 @@ struct QuestionView: View {
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
+                    .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color.black.opacity(0.5), lineWidth: 1)
+            )
             })
             
             //FOR OPTIONS....C
@@ -44,6 +52,10 @@ struct QuestionView: View {
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
+                    .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color.black.opacity(0.5), lineWidth: 1)
+            )
             })
             
             //FOR OPTIONS....D
@@ -53,6 +65,10 @@ struct QuestionView: View {
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
+                    .background(
+                RoundedRectangle(cornerRadius: 15)
+                    .stroke(Color.black.opacity(0.5), lineWidth: 1)
+            )
             })
             
             Spacer(minLength: 0)
