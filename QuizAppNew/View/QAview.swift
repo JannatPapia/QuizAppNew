@@ -11,7 +11,6 @@ import SwiftUI
 
 struct QAview: View {
     var body: some View {
-       // IMPORTANT: Top progress view.....
         ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                content: {
             Capsule()
@@ -23,9 +22,7 @@ struct QAview: View {
                 .frame(width: 100, height: 6)
         })
         .padding([.leading,.trailing,.top],10)
-        
-        //MARK: Correct and Wrong count....
-        
+                
         HStack{
             Label(
                 title : { ( Text("1"))
@@ -56,16 +53,12 @@ struct QAview: View {
         
         ZStack{
             ForEach("Nazmul hasan".reversed().indices) { index in
-                //View .....
                 
-    //            QuestionView( correct: $correct, wrong: $wrong, answered: $answered)
             }
         }
         .padding()
             Spacer(minLength: 0)
         
-        // MARK: fetching......
-
     }
 }
 

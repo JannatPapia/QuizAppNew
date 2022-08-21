@@ -10,8 +10,7 @@ import SwiftUI
 struct QuestionView: View {
     var body: some View {
         VStack(spacing: 22){
-            // FOR QUESTION....
-            Text("Why?") 
+            Text("Why?")
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
@@ -19,7 +18,6 @@ struct QuestionView: View {
             
             Spacer(minLength: 0)
             
-            // Buttons
             Button(action: {}, label: {
                 Text("question.optionA")
                     .foregroundColor(Color.black)
@@ -27,26 +25,20 @@ struct QuestionView: View {
                     .frame(maxWidth: .infinity)
             })
             
-            //FOR OPTIONS....B
-            
             Button(action: {}, label: {
                 Text("question.optionB")
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
             })
-            
-            //FOR OPTIONS....C
-            
+                        
             Button(action: {}, label: {
                 Text("question.optionC")
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
             })
-            
-            //FOR OPTIONS....D
-            
+                        
             Button(action: {}, label: {
                 Text("question.optionD")
                     .foregroundColor(Color.black)
@@ -55,12 +47,8 @@ struct QuestionView: View {
             })
             
             Spacer(minLength: 0)
-            //Buttons use for submitted answer And Next Question use with HStack...
             
             HStack(spacing: 15) {
-                
-            // Buttons use for submitted answer
-                
                 Button(action: {}, label: {
                     Text("Submit")
                         .fontWeight(.heavy)
@@ -70,9 +58,7 @@ struct QuestionView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                 })
-                
-                // For next question Button....
-                
+                                
                 Button(action: {
                     withAnimation{
 

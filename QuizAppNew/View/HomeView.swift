@@ -10,14 +10,11 @@ import SwiftUI
 struct HomeView: View {
     var body: some View {
         VStack{
-            // MARK: Title....
-            
             Text("Revel Station")
                 .font(.system(size: 38))
                 .fontWeight(.heavy)
                 .foregroundColor(.purple)
                 .padding(.top)
-            // MARK: SUb Title....
             
             Text("Choose the way \nyou play !!!")
                 .font(.title2)
@@ -27,12 +24,8 @@ struct HomeView: View {
                 .multilineTextAlignment(.center)
             
             Spacer(minLength: 0)
-            
-            //MARK: Level View...
-            //MARK: Level view...
-            
+                        
               LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 20), count: 2), spacing: 35, content: {
-                  //MARK: four levels..
                   ForEach(1...4,id:\.self){ index in
                       VStack(spacing: 15) {
                           Image("lv\(index)")
