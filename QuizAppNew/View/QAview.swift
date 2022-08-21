@@ -10,10 +10,10 @@ import SwiftUI
 //MARK: Question Answer view
 struct QAview: View {
     //outgoing
-    @Binding var correct: Int
-    @Binding var wrong: Int
-    @Binding var answered: Int
-    var set : String  
+//    @Binding var correct: Int
+//    @Binding var wrong: Int
+//    @Binding var answered: Int
+//    var set : String
     
 //    @State var answered: Int = 0
     var body: some View {
@@ -40,8 +40,8 @@ struct QAview: View {
         //MARK: Correct and Wrong count....
         HStack{
             Label(
-               title: { Text(correct == 0 ? "" : "\(correct)")
-            //    title : { ( Text("1"))
+            //   title: { Text(correct == 0 ? "" : "\(correct)")
+                title : { ( Text("1"))
                         .font(.largeTitle)
                         .foregroundColor(Color.black)
                 },
@@ -53,8 +53,8 @@ struct QAview: View {
             Spacer()
             
             Label(
-                title: { Text(wrong == 0 ? "" : "\(wrong)")
-             //    title : { ( Text("1"))
+             //   title: { Text(wrong == 0 ? "" : "\(wrong)")
+                 title : { ( Text("1"))
                         .font(.largeTitle)
                         .foregroundColor(Color.black)
                 },
