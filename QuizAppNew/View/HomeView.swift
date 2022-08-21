@@ -62,10 +62,6 @@ struct HomeView: View {
         .fullScreenCover(isPresented: $show, content: {
                             QAview()
                         })
-//        .sheet(isPresented: $show, content: {
-//            QAview()
-//        })
     }
-//}
 }
 }

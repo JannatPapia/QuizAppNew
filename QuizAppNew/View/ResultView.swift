@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
+    @Environment(\.presentationMode) var present
     var body: some View {
         VStack(spacing: 25){
             Image("trophy")
@@ -39,15 +40,29 @@ struct ResultView: View {
                     .font(.largeTitle)
                     .foregroundColor(.black)
             }
-                Button(action: {}, label: {
-                    Text("GoTo Home")
-                        .fontWeight(.heavy)
-                        .foregroundColor(.white)
-                        .padding(.vertical)
-                        .frame(width: UIScreen.main.bounds.width - 150)
-                        .background(Color.blue)
-                        .cornerRadius(15)
-                })
+            Button(action: {
+                // closing sheet....
+             //   present.wrappedValue.dismiss()
+            }, label: {
+                Text("GoTo Home")
+                    .fontWeight(.heavy)
+                    .foregroundColor(.white)
+                    .padding(.vertical)
+                    .frame(width: UIScreen.main.bounds.width - 150)
+                    .background(Color.blue)
+                    .cornerRadius(15)
+            })
+
+       //     @Environment(\.presentationMode) var present
+//                Button(action: {}, label: {
+//                    Text("GoTo Home")
+//                        .fontWeight(.heavy)
+//                        .foregroundColor(.white)
+//                        .padding(.vertical)
+//                        .frame(width: UIScreen.main.bounds.width - 150)
+//                        .background(Color.blue)
+//                        .cornerRadius(15)
+//                })
             }
   //      }
     }
