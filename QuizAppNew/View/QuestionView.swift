@@ -101,6 +101,7 @@ struct QuestionView: View {
                 //                      })
                 //           //     Text("Submit")
                 Button(action: {
+                    self.destination = QAview()
                     self.showLoginView.toggle()
                 }, label: {
                     Text("Submit")
