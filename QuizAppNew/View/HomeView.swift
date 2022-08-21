@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
+    @State var show = false
     var body: some View {
         VStack{
             // MARK: Title....
@@ -46,6 +47,10 @@ struct HomeView: View {
                     .frame(maxWidth: .infinity)
                     .background(Color.white)
                     .cornerRadius(15)
+                    // opening QA view as sheet....
+                    .onTapGesture {
+                        show.toggle()
+                    }
                 }
             })
             .padding()
@@ -53,6 +58,9 @@ struct HomeView: View {
         }
         .background(Color.black.opacity(0.05))
         .ignoresSafeArea()
+        .sheet(isPresented: $show, content: {
+            QAview()
+        })
     }
 }
 
