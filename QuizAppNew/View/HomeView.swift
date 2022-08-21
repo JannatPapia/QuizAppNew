@@ -10,6 +10,8 @@ import SwiftUI
 struct HomeView: View {
     @State var show = false
     var body: some View {
+    //    ScrollView {
+            ZStack {
         VStack{
             // MARK: Title....
             Text("Revel Station")
@@ -56,11 +58,12 @@ struct HomeView: View {
             .padding()
             Spacer(minLength: 0)
         }
-        .background(Color.black.opacity(0.05))
-        .ignoresSafeArea()
+        .background(Color.black.opacity(0.05).ignoresSafeArea())
+      //  .ignoresSafeArea()
         .sheet(isPresented: $show, content: {
             QAview()
         })
     }
+//}
 }
-
+}
