@@ -86,7 +86,6 @@ struct QuestionView: View {
                         .cornerRadius(15)
                 })
                 
-                
                 // For next question Button....
                 
                 Button(action: {

@@ -26,7 +26,7 @@ struct QAview: View {
         
         HStack{
             Label(
-                title : { ( Text("1"))
+                title : { ( Text("2"))
                     .font(.largeTitle)
                     .foregroundColor(Color.black)
                 },
