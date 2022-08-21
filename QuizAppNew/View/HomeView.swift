@@ -73,7 +73,7 @@ struct HomeView: View {
         }
         .background(Color.black.opacity(0.05))
         .sheet(isPresented: $show, content: {
-                  QAview(correct: $correct, wrong: $wrong, answered: $answered, set: set)
+              //    QAview(correct: $correct, wrong: $wrong, answered: $answered, set: set)
               })
         .ignoresSafeArea()
     }

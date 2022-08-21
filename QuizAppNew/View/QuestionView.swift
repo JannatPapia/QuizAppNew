@@ -27,8 +27,8 @@ struct QuestionView: View {
             Spacer(minLength: 0)
             
             // Buttons
-        //    Button(action: {selected = question.optionA}, label: { // right
-            Button(action: {}, label: {
+            Button(action: {selected = question.optionA}, label: { // right
+         //   Button(action: {}, label: {
                 Text(question.optionA)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
@@ -41,8 +41,8 @@ struct QuestionView: View {
             
             //FOR OPTIONS....B
             
-    //        Button(action: {selected = question.optionB}, label: {\
-            Button(action: {}, label: {
+            Button(action: {selected = question.optionB}, label: {\
+       //     Button(action: {}, label: {
                 Text(question.optionB)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
@@ -55,8 +55,8 @@ struct QuestionView: View {
             
             //FOR OPTIONS....C
             
-        //    Button(action: {selected = question.optionC}, label: {
-            Button(action: {}, label: {
+            Button(action: {selected = question.optionC}, label: {
+         //   Button(action: {}, label: {
                 Text(question.optionC)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
@@ -69,8 +69,8 @@ struct QuestionView: View {
             
             //FOR OPTIONS....D
             
-         //   Button(action: {selected = question.optionD}, label: {
-            Button(action: {}, label: {
+            Button(action: {selected = question.optionD}, label: {
+         //   Button(action: {}, label: {
                 Text(question.optionD)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
