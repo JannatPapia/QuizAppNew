@@ -15,6 +15,7 @@
 		37911F4E28B12B94006B8A8D /* QAview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37911F4D28B12B94006B8A8D /* QAview.swift */; };
 		37911F5028B13ACA006B8A8D /* QuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37911F4F28B13ACA006B8A8D /* QuestionModel.swift */; };
 		37911F5228B16CDF006B8A8D /* QuestionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37911F5128B16CDF006B8A8D /* QuestionView.swift */; };
+		37911F5428B225E1006B8A8D /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37911F5328B225E1006B8A8D /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		37911F4D28B12B94006B8A8D /* QAview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QAview.swift; sourceTree = "<group>"; };
 		37911F4F28B13ACA006B8A8D /* QuestionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionModel.swift; sourceTree = "<group>"; };
 		37911F5128B16CDF006B8A8D /* QuestionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionView.swift; sourceTree = "<group>"; };
+		37911F5328B225E1006B8A8D /* ResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 				37911F4B28B101F3006B8A8D /* HomeView.swift */,
 				37911F4D28B12B94006B8A8D /* QAview.swift */,
 				37911F5128B16CDF006B8A8D /* QuestionView.swift */,
+				37911F5328B225E1006B8A8D /* ResultView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				37911F3E28B101A8006B8A8D /* ContentView.swift in Sources */,
 				37911F3C28B101A8006B8A8D /* QuizAppNewApp.swift in Sources */,
 				37911F5228B16CDF006B8A8D /* QuestionView.swift in Sources */,
+				37911F5428B225E1006B8A8D /* ResultView.swift in Sources */,
 				37911F5028B13ACA006B8A8D /* QuestionModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
