@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
-    @State var showLoginView: Bool = false
+    @Binding var showLoginView: Bool
     var body: some View {
         VStack(spacing: 22){
             // FOR QUESTION....
@@ -92,17 +92,16 @@ struct QuestionView: View {
                  ResultView()
                  })
                  ----------- */
-                
-                //                Button("Submit") {
-                //                          self.showLoginView = true
-                //                      }
+                //
+                //                                Button("Submit") {
+                //                                    view.isSubmitted  = true
+                //                                      }
                 //                .sheet(isPresented: $showLoginView, content: {
                 //                          ResultView()
                 //                      })
                 //           //     Text("Submit")
                 Button(action: {
-                    self.destination = QAview()
-                    self.showLoginView.toggle()
+                    showLoginView.toggle()
                 }, label: {
                     Text("Submit")
                         .fontWeight(.heavy)

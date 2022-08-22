@@ -10,58 +10,61 @@ import SwiftUI
 //MARK: Question Answer view
 struct QAview: View {
     @State var isSubmitted = false
-    @Environment(\.presentationMode) var present
     var body: some View {
-        if isSubmitted {
+        if isSubmitted  {
             ResultView()
+            
         } else {
-        ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
-               content: {
-            Capsule()
-                .fill(Color.gray.opacity(0.5))
-                .frame(height: 6)
+            ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
+                   content: {
+                Capsule()
+                    .fill(Color.gray.opacity(0.5))
+                    .frame(height: 6)
+                
+                Capsule()
+                    .fill(Color.green)
+                    .frame(width: 100, height: 6)
+            })
+            .padding([.leading,.trailing,.top],10)
             
-            Capsule()
-                .fill(Color.green)
-                .frame(width: 100, height: 6)
-        })
-        .padding([.leading,.trailing,.top],10)
-        
-        //MARK: Correct and Wrong count......
-        
-        HStack{
-            Label(
-                title : { ( Text("2"))
-                    .font(.largeTitle)
-                    .foregroundColor(Color.black)
-                },
-                icon: {Image(systemName: "checkmark.circle")
+            //MARK: Correct and Wrong count......
+            
+            HStack{
+                Label(
+                    title : { ( Text("2"))
                         .font(.largeTitle)
-                        .foregroundColor(Color.green)
-                })
-            
-            Spacer()
-            
-            Label(
-                title : { ( Text("1"))
-                    .font(.largeTitle)
-                    .foregroundColor(Color.black)
-                },
-                icon: {Image(systemName: "xmark.circle")
+                        .foregroundColor(Color.black)
+                    },
+                    icon: {Image(systemName: "checkmark.circle")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.green)
+                    })
+                
+                Spacer()
+                
+                Label(
+                    title : { ( Text("1"))
                         .font(.largeTitle)
-                        .foregroundColor(Color.red)
-                })
-        }
-        
-        .padding([.leading,.trailing,.top],10)
-        ZStack{
-            ForEach("Nazmul hasan".reversed().indices) { index in
-                QuestionView()
+                        .foregroundColor(Color.black)
+                    },
+                    icon: {Image(systemName: "xmark.circle")
+                            .font(.largeTitle)
+                            .foregroundColor(Color.red)
+                    })
             }
-        }
-        .padding()
-        Spacer(minLength: 0)
             
+            .padding([.leading,.trailing,.top],10)
+            ZStack{
+                ForEach("Nazmul hasan".reversed().indices) { index in
+                    QuestionView(showLoginView: $isSubmitted)
+                }
+            }
+            .padding()
+            Spacer(minLength: 0)
+            
+        }
     }
 }
-}
+
+
+

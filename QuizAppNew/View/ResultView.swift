@@ -8,41 +8,41 @@
 import SwiftUI
 
 struct ResultView: View {
-    @Environment(\.presentationMode) var present
+    //    @Environment(\.presentationMode) var present
     var body: some View {
         VStack(spacing: 25){
             Image("trophy")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .frame(width: 250, height: 250)
-
+            
             Text("Well Done !!!")
                 .font(.title)
                 .fontWeight(.heavy)
                 .foregroundColor(.black)
-
+            
             // score and Back to home
             HStack(spacing: 15) {
                 Image(systemName: "checkmark")
                     .font(.largeTitle)
                     .foregroundColor(.green)
-
+                
                 Text("1")
                     .font(.largeTitle)
                     .foregroundColor(.black)
-
+                
                 Image(systemName: "xmark")
                     .font(.largeTitle)
                     .foregroundColor(.red)
                     .padding(.leading)
-
+                
                 Text("1")
                     .font(.largeTitle)
                     .foregroundColor(.black)
             }
             Button(action: {
                 // closing sheet....
-             //   present.wrappedValue.dismiss()
+                //   present.wrappedValue.dismiss()
             }, label: {
                 Text("GoTo Home")
                     .fontWeight(.heavy)
@@ -52,7 +52,7 @@ struct ResultView: View {
                     .background(Color.blue)
                     .cornerRadius(15)
             })
-            }
+        }
         
     }
 }
