@@ -73,33 +73,6 @@ struct QuestionView: View {
             Spacer(minLength: 0)
             
             HStack(spacing: 15) {
-                /* ---------
-                 Button(action: {
-                 self.showLoginView.toggle()
-                 }) {
-                 Text("Submit")
-                 .fontWeight(.heavy)
-                 .foregroundColor(.white)
-                 .padding(.vertical)
-                 .frame(maxWidth: .infinity)
-                 .background(Color.blue)
-                 .cornerRadius(15)
-                 }.sheet(isPresented: $showLoginView) {
-                 ResultView()
-                 }
-                 
-                 .fullScreenCover(isPresented: $showLoginView, content: {
-                 ResultView()
-                 })
-                 ----------- */
-                //
-                //                                Button("Submit") {
-                //                                    view.isSubmitted  = true
-                //                                      }
-                //                .sheet(isPresented: $showLoginView, content: {
-                //                          ResultView()
-                //                      })
-                //           //     Text("Submit")
                 Button(action: {
                     showLoginView.toggle()
                 }, label: {
@@ -127,15 +100,14 @@ struct QuestionView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                 })
-                
+       //     }
                 .padding(.bottom)
-            }
+        }
         }
         .padding()
         .background(Color.white)
         .cornerRadius(25)
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: 5, y: 5)
         .shadow(color: Color.black.opacity(0.05), radius: 5, x: -5, y: -5)
-        
     }
 }

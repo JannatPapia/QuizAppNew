@@ -41,7 +41,7 @@ struct ResultView: View {
                     .foregroundColor(.black)
             }
             Button(action: {
-                // closing sheet....
+                //MARK: closing sheet....
                    present.wrappedValue.dismiss()
             }, label: {
                 Text("GoTo Home")
@@ -53,7 +53,6 @@ struct ResultView: View {
                     .cornerRadius(15)
             })
         }
-        
     }
 }
 

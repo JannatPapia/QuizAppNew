@@ -13,7 +13,6 @@ struct QAview: View {
     var body: some View {
         if isSubmitted  {
             ResultView()
-            
         } else {
             ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                    content: {
