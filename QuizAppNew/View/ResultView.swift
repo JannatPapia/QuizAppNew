@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
-    //    @Environment(\.presentationMode) var present
+        @Environment(\.presentationMode) var present
     var body: some View {
         VStack(spacing: 25){
             Image("trophy")
@@ -42,7 +42,7 @@ struct ResultView: View {
             }
             Button(action: {
                 // closing sheet....
-                //   present.wrappedValue.dismiss()
+                   present.wrappedValue.dismiss()
             }, label: {
                 Text("GoTo Home")
                     .fontWeight(.heavy)
