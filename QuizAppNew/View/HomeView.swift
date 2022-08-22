@@ -59,6 +59,9 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
             .background(Color.black.opacity(0.05).ignoresSafeArea())
+            .onAppear{
+                //load json data here. ....... 1st
+            }
             .fullScreenCover(isPresented: $show, content: {
                 QAview()
             })
