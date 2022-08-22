@@ -81,7 +81,7 @@ struct QuestionView: View {
                         .foregroundColor(.white)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
+                        .background(Color.pink.opacity(0.5))
                         .cornerRadius(15)
                 })
                 
@@ -97,7 +97,7 @@ struct QuestionView: View {
                         .foregroundColor(.white)
                         .padding(.vertical)
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
+                        .background(Color.pink.opacity(0.5))
                         .cornerRadius(15)
                 })
             }
