@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ResultView: View {
-        @Environment(\.presentationMode) var present
+    @Environment(\.presentationMode) var present
     var body: some View {
         VStack(spacing: 25){
             Image("trophy")
@@ -21,13 +21,13 @@ struct ResultView: View {
                 .fontWeight(.heavy)
                 .foregroundColor(.black)
             
-            // score and Back to home
+            //MARK: score and Back to home
             HStack(spacing: 15) {
                 Image(systemName: "checkmark")
                     .font(.largeTitle)
                     .foregroundColor(.green)
                 
-                Text("1")
+                Text("2")
                     .font(.largeTitle)
                     .foregroundColor(.black)
                 
@@ -42,14 +42,14 @@ struct ResultView: View {
             }
             Button(action: {
                 //MARK: closing sheet....
-                   present.wrappedValue.dismiss()
+                present.wrappedValue.dismiss()
             }, label: {
                 Text("GoTo Home")
                     .fontWeight(.heavy)
                     .foregroundColor(.white)
                     .padding(.vertical)
                     .frame(width: UIScreen.main.bounds.width - 150)
-                    .background(Color.blue)
+                    .background(Color.pink.opacity(0.7))
                     .cornerRadius(15)
             })
         }
