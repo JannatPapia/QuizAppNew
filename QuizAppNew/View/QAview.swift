@@ -13,6 +13,7 @@ struct QAview: View {
     var body: some View {
         if isSubmitted  {
             ResultView()
+            
         } else {
             ZStack(alignment: Alignment(horizontal: .leading, vertical: .center),
                    content: {
@@ -55,7 +56,7 @@ struct QAview: View {
             .padding([.leading,.trailing,.top],10)
             ZStack{
                 ForEach("Nazmul hasan".reversed().indices) { index in
-                    QuestionView(showLoginView: $isSubmitted)
+                    QuestionView(isResultShow: $isSubmitted)
                 }
             }
             .padding()

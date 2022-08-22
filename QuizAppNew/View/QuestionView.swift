@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
-    @Binding var showLoginView: Bool
+    @Binding var isResultShow : Bool
     var body: some View {
         VStack(spacing: 22){
             // FOR QUESTION....
@@ -74,7 +74,7 @@ struct QuestionView: View {
             
             HStack(spacing: 15) {
                 Button(action: {
-                    showLoginView.toggle()
+                    isResultShow.toggle()
                 }, label: {
                     Text("Submit")
                         .fontWeight(.heavy)
