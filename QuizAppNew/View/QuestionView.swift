@@ -100,9 +100,8 @@ struct QuestionView: View {
                         .background(Color.blue)
                         .cornerRadius(15)
                 })
-       //     }
-                .padding(.bottom)
-        }
+            }
+            .padding(.bottom)
         }
         .padding()
         .background(Color.white)
