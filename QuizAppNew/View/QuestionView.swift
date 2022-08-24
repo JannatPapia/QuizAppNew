@@ -9,15 +9,10 @@ import SwiftUI
 
 struct QuestionView: View {
     @Binding var isResultShow : Bool
-    //MARK: Crate variable for load json item
-    @Binding var question: QuestionModel
-    @Binding var correct: Int
-    @Binding var wrong: Int
-    @Binding var answered: Int
     var body: some View {
         VStack(spacing: 22){
             // FOR QUESTION....
-            Text(question.qustion!)
+            Text("question.qustion!")
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
@@ -26,7 +21,7 @@ struct QuestionView: View {
             Spacer(minLength: 0)
             
             Button(action: {}, label: {
-                Text(question.option1!)
+                Text("question.option1!")
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
@@ -39,7 +34,7 @@ struct QuestionView: View {
             //FOR OPTIONS....B
             
             Button(action: {}, label: {
-                Text(question.option2!)
+                Text("question.option2!")
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
@@ -52,7 +47,7 @@ struct QuestionView: View {
             //FOR OPTIONS....C
             
             Button(action: {}, label: {
-                Text(question.option3!)
+                Text("question.option3!")
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
@@ -65,7 +60,7 @@ struct QuestionView: View {
             //FOR OPTIONS....D
             
             Button(action: {}, label: {
-                Text(question.option4!)
+                Text("question.option4!")
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)

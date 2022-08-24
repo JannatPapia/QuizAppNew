@@ -8,8 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
+    @ObservedObject var viewModel = QuestionViewModel()
     var body: some View {
-        HomeView()
+        HomeView(viewModel: viewModel)
     }
 }
 

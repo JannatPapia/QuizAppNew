@@ -14,7 +14,7 @@ import Foundation
 import Foundation
 
 struct QuestionModel : Codable {
-
+    
     let answer : String?
     let category : String?
     let image : String?
@@ -24,8 +24,8 @@ struct QuestionModel : Codable {
     let option4 : String?
     let qustion : String?
     let sl : Int?
-
-
+    
+    
     enum CodingKeys: String, CodingKey {
         case answer = "answer"
         case category = "category"
@@ -49,60 +49,13 @@ struct QuestionModel : Codable {
         qustion = try values.decodeIfPresent(String.self, forKey: .qustion)
         sl = try values.decodeIfPresent(Int.self, forKey: .sl)
     }
-    var isSubmitted = false
-    var completed = false
-
 }
-
-//struct QuestionModel:Identifiable, Codable {
-//    var id: String { UUID().uuidString }
-//    var question : String = ""
-//    var optionA : String  = ""
-//    var optionB : String  = ""
-//    var optionC : String  = ""
-//    var optionD : String  = ""
-//    var answer: String  = ""
-//    var sl : Int?
-//
-//    enum CodingKeys: String, CodingKey {
-//        case question = "qustion"
-//        case optionA = "option1"
-//        case optionB = "option2"
-//        case optionC = "option3"
-//        case optionD  = "option4"
-//        case answer = "answer"
-//    }
-//
-//    //for checking
-//    var isSubmitted = false
-//    var completed = false
-//}
-
-//struct QuestionModelElement: Codable {
-//    let sl: Int
-//    let category: Category
-//    let qustion: Qustion
-//    let option1, option2, option3, option4: String
-//    let answer, image: String
-//
-//    var isSubmitted = false
-//    var completed = false
-//}
-//
-//enum Category: String, Codable {
-//    case roadSign = "Road sign"
-//}
-//
-//enum Qustion: String, Codable {
-//    case thisSignMeans = "This sign means?"
-//}
 
 
 class QuestionViewModel:  ObservableObject {
     
     @Published var question : [QuestionModel] = []
     // var questions = [QuestionModel]()
-    
     func loadJjsonData(link: String) {
         do {
             if let file = Bundle.main.path(forResource: "data", ofType: "json") {

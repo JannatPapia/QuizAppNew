@@ -10,11 +10,6 @@ import SwiftUI
 //MARK: Question Answer view
 struct QAview: View {
     @State var isSubmitted = false
-    @ObservedObject var viewModel = QuestionViewModel()
-    //outgoing
-    @State var correct: Int = 0
-    @State var wrong: Int = 0
-    @State var answered: Int = 0
     
     var body: some View {
         if isSubmitted  {
@@ -59,9 +54,9 @@ struct QAview: View {
             }
             .padding([.leading,.trailing,.top],10)
             ZStack{
-                ForEach("Nazmul hasan".reversed().indices) { index in
-                 //   QuestionView(isResultShow: $isSubmitted)
-                    QuestionView(isResultShow: $isSubmitted, question: $viewModel.question[index], correct: $correct, wrong: $wrong, answered: $answered)
+                ForEach("Nazmul Hasan".reversed().indices) { index in
+                    QuestionView(isResultShow: $isSubmitted)
+                    //    QuestionView(isResultShow: $isSubmitted, question: $viewModel.question[index], correct: $correct, wrong: $wrong, answered: $answered)
                 }
             }
             .padding()
