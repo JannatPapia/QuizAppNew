@@ -7,29 +7,75 @@
 
 import Foundation
 
-struct QuestionModel:Identifiable, Codable {
-    var id: String { UUID().uuidString }
-    var question : String = ""
-    var optionA : String  = ""
-    var optionB : String  = ""
-    var optionC : String  = ""
-    var optionD : String  = ""
-    var answer: String  = ""
-    var sl : Int?
-    
+//
+//    RootClass.swift
+//    Model file generated using JSONExport: https://github.com/Ahmed-Ali/JSONExport
+
+import Foundation
+
+struct QuestionModel : Codable {
+
+    let answer : String?
+    let category : String?
+    let image : String?
+    let option1 : String?
+    let option2 : String?
+    let option3 : String?
+    let option4 : String?
+    let qustion : String?
+    let sl : Int?
+
+
     enum CodingKeys: String, CodingKey {
-        case question = "qustion"
-        case optionA = "option1"
-        case optionB = "option2"
-        case optionC = "option3"
-        case optionD  = "option4"
         case answer = "answer"
+        case category = "category"
+        case image = "image"
+        case option1 = "option1"
+        case option2 = "option2"
+        case option3 = "option3"
+        case option4 = "option4"
+        case qustion = "qustion"
+        case sl = "sl"
     }
-    
-    //for checking
-    var isSubmitted = false
-    var completed = false
+    init(from decoder: Decoder) throws {
+        let values = try decoder.container(keyedBy: CodingKeys.self)
+        answer = try values.decodeIfPresent(String.self, forKey: .answer)
+        category = try values.decodeIfPresent(String.self, forKey: .category)
+        image = try values.decodeIfPresent(String.self, forKey: .image)
+        option1 = try values.decodeIfPresent(String.self, forKey: .option1)
+        option2 = try values.decodeIfPresent(String.self, forKey: .option2)
+        option3 = try values.decodeIfPresent(String.self, forKey: .option3)
+        option4 = try values.decodeIfPresent(String.self, forKey: .option4)
+        qustion = try values.decodeIfPresent(String.self, forKey: .qustion)
+        sl = try values.decodeIfPresent(Int.self, forKey: .sl)
+    }
+
+
 }
+
+//struct QuestionModel:Identifiable, Codable {
+//    var id: String { UUID().uuidString }
+//    var question : String = ""
+//    var optionA : String  = ""
+//    var optionB : String  = ""
+//    var optionC : String  = ""
+//    var optionD : String  = ""
+//    var answer: String  = ""
+//    var sl : Int?
+//
+//    enum CodingKeys: String, CodingKey {
+//        case question = "qustion"
+//        case optionA = "option1"
+//        case optionB = "option2"
+//        case optionC = "option3"
+//        case optionD  = "option4"
+//        case answer = "answer"
+//    }
+//
+//    //for checking
+//    var isSubmitted = false
+//    var completed = false
+//}
 
 //struct QuestionModelElement: Codable {
 //    let sl: Int
