@@ -17,7 +17,7 @@ struct QuestionView: View {
     var body: some View {
         VStack(spacing: 22){
             // FOR QUESTION....
-            Text("Why?")
+            Text(question.qustion!)
                 .font(.title2)
                 .fontWeight(.heavy)
                 .foregroundColor(Color.black)
@@ -26,7 +26,7 @@ struct QuestionView: View {
             Spacer(minLength: 0)
             
             Button(action: {}, label: {
-                Text("question.optionA")
+                Text(question.option1!)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
@@ -39,7 +39,7 @@ struct QuestionView: View {
             //FOR OPTIONS....B
             
             Button(action: {}, label: {
-                Text("question.optionB")
+                Text(question.option2!)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
@@ -52,7 +52,7 @@ struct QuestionView: View {
             //FOR OPTIONS....C
             
             Button(action: {}, label: {
-                Text("question.optionC")
+                Text(question.option3!)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)
@@ -65,7 +65,7 @@ struct QuestionView: View {
             //FOR OPTIONS....D
             
             Button(action: {}, label: {
-                Text("question.optionD")
+                Text(question.option4!)
                     .foregroundColor(Color.black)
                     .padding([.horizontal,.vertical],5)
                     .frame(maxWidth: .infinity)

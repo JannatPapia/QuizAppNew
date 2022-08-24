@@ -49,7 +49,8 @@ struct QuestionModel : Codable {
         qustion = try values.decodeIfPresent(String.self, forKey: .qustion)
         sl = try values.decodeIfPresent(Int.self, forKey: .sl)
     }
-
+    var isSubmitted = false
+    var completed = false
 
 }
 
@@ -99,7 +100,7 @@ struct QuestionModel : Codable {
 
 class QuestionViewModel:  ObservableObject {
     
-    @Published var questions : [QuestionModel] = []
+    @Published var question : [QuestionModel] = []
     // var questions = [QuestionModel]()
     
     func loadJjsonData(link: String) {
@@ -108,7 +109,7 @@ class QuestionViewModel:  ObservableObject {
                 let data = try Data(contentsOf: URL(fileURLWithPath: file), options: .mappedIfSafe)
                 let items = try JSONDecoder().decode([QuestionModel].self, from: data)
                 
-                self.questions = items
+                self.question = items
             }
         }
         
