@@ -9,6 +9,11 @@ import SwiftUI
 
 struct QuestionView: View {
     @Binding var isResultShow : Bool
+    //MARK: Crate variable for load json item
+    @Binding var question: QuestionModel
+    @Binding var correct: Int
+    @Binding var wrong: Int
+    @Binding var answered: Int
     var body: some View {
         VStack(spacing: 22){
             // FOR QUESTION....
