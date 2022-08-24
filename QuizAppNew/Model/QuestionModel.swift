@@ -30,3 +30,55 @@ struct QuestionModel:Identifiable, Codable {
     var isSubmitted = false
     var completed = false
 }
+
+//struct QuestionModelElement: Codable {
+//    let sl: Int
+//    let category: Category
+//    let qustion: Qustion
+//    let option1, option2, option3, option4: String
+//    let answer, image: String
+//
+//    var isSubmitted = false
+//    var completed = false
+//}
+//
+//enum Category: String, Codable {
+//    case roadSign = "Road sign"
+//}
+//
+//enum Qustion: String, Codable {
+//    case thisSignMeans = "This sign means?"
+//}
+
+
+class QuestionViewModel:  ObservableObject {
+    
+    @Published var questions : [QuestionModel] = []
+    // var questions = [QuestionModel]()
+    
+    func loadJjsonData(link: String) {
+        do {
+            if let file = Bundle.main.path(forResource: "data", ofType: "json") {
+                let data = try Data(contentsOf: URL(fileURLWithPath: file), options: .mappedIfSafe)
+                let items = try JSONDecoder().decode([QuestionModel].self, from: data)
+                
+                self.questions = items
+            }
+        }
+        
+        catch let DecodingError.dataCorrupted(context) {
+            print(context)
+        } catch let DecodingError.keyNotFound(key, context) {
+            print("Key '\(key)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch let DecodingError.valueNotFound(value, context) {
+            print("Value '\(value)' not found:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch let DecodingError.typeMismatch(type, context)  {
+            print("Type '\(type)' mismatch:", context.debugDescription)
+            print("codingPath:", context.codingPath)
+        } catch {
+            print("error: ", error)
+        }
+    }
+}
