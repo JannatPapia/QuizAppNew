@@ -8,9 +8,9 @@
 import SwiftUI
 
 struct ContentView: View {
-    @ObservedObject var viewModel = QuestionViewModel()
+  //  @ObservedObject var viewModel = QuestionViewModel()
     var body: some View {
-        HomeView(viewModel: viewModel)
+        HomeView()
     }
 }
 
