@@ -52,6 +52,26 @@ struct QuestionModel : Codable {
 }
 
 
+var questions = [QuestionModel]()
+
+func localCalling(link: String) {
+
+    if let path = Bundle.main.path(forResource: "data", ofType: "json") {
+        do {
+              let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+            let _posts = try? JSONDecoder().decode([QuestionModel].self, from: data)
+                
+            for item in _posts! {
+                print(item.qustion)
+            }
+
+        } catch {
+               // handle error
+              //      print("error")
+          }
+    }
+}
+
 //class QuestionViewModel:  ObservableObject {
 //    
 //    @Published var question : [QuestionModel] = []

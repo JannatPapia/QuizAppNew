@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State var show = false
- //   @StateObject var viewModel : QuestionViewModel //create instance for questionViewModel
+    @StateObject var viewModel : QuestionModel //create instance for questionViewModel
     var body: some View {
         ZStack {
             VStack{
