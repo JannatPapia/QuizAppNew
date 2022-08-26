@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State var show = false
-    @StateObject var viewModel : QuestionModel //create instance for questionViewModel
+ //   @StateObject var viewModel : QuestionModel //create instance for questionViewModel
     var body: some View {
         ZStack {
             VStack{
@@ -61,7 +61,7 @@ struct HomeView: View {
             .background(Color.black.opacity(0.05).ignoresSafeArea())
             .onAppear{
                 //load json data here. ....... 1st
-                
+            
             }
             .fullScreenCover(isPresented: $show, content: {
                 QAview()

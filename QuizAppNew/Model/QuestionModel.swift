@@ -52,55 +52,55 @@ struct QuestionModel : Codable {
 }
 
 
-var questions = [QuestionModel]()
-
-func localCalling(link: String) {
-
-    if let path = Bundle.main.path(forResource: "data", ofType: "json") {
-        do {
-              let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-            let _posts = try? JSONDecoder().decode([QuestionModel].self, from: data)
-                
-            for item in _posts! {
-                print(item.qustion)
-            }
-
-        } catch {
-               // handle error
-              //      print("error")
-          }
-    }
-}
-
-//class QuestionViewModel:  ObservableObject {
-//    
-//    @Published var question : [QuestionModel] = []
-//    // var questions = [QuestionModel]()
-//    func loadJjsonData(link: String) {
+//var questions = [QuestionModel]()
+//
+//func localCalling(link: String) {
+//
+//    if let path = Bundle.main.path(forResource: "data", ofType: "json") {
 //        do {
-//            if let file = Bundle.main.path(forResource: "data", ofType: "json") {
-//                // ekhane data use kore file url pawar jonno data URL diye URL(fileURLWithPath: file) moddhe url(jsonfile) pass koresi
-//                //data url used for pass in the path(JSONfile) just like thatURL(fileURLWithPath: file)
-//                let data = try Data(contentsOf: URL(fileURLWithPath: file), options: .mappedIfSafe)
-//                let items = try JSONDecoder().decode([QuestionModel].self, from: data)
-//                
-//                self.question = items
+//              let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+//            let _posts = try? JSONDecoder().decode([QuestionModel].self, from: data)
+//
+//            for item in _posts! {
+//                print(item.qustion)
 //            }
-//        }
-//        
-//        catch let DecodingError.dataCorrupted(context) {
-//            print(context)
-//        } catch let DecodingError.keyNotFound(key, context) {
-//            print("Key '\(key)' not found:", context.debugDescription)
-//            print("codingPath:", context.codingPath)
-//        } catch let DecodingError.valueNotFound(value, context) {
-//            print("Value '\(value)' not found:", context.debugDescription)
-//            print("codingPath:", context.codingPath)
-//        } catch let DecodingError.typeMismatch(type, context)  {
-//            print("Type '\(type)' mismatch:", context.debugDescription)
-//            print("codingPath:", context.codingPath)
+//
 //        } catch {
-//            print("error: ", error)
-//        }
+//               // handle error
+//              //      print("error")
+//          }
 //    }
 //}
+//
+////class QuestionViewModel:  ObservableObject {
+////
+////    @Published var question : [QuestionModel] = []
+////    // var questions = [QuestionModel]()
+////    func loadJjsonData(link: String) {
+////        do {
+////            if let file = Bundle.main.path(forResource: "data", ofType: "json") {
+////                // ekhane data use kore file url pawar jonno data URL diye URL(fileURLWithPath: file) moddhe url(jsonfile) pass koresi
+////                //data url used for pass in the path(JSONfile) just like thatURL(fileURLWithPath: file)
+////                let data = try Data(contentsOf: URL(fileURLWithPath: file), options: .mappedIfSafe)
+////                let items = try JSONDecoder().decode([QuestionModel].self, from: data)
+////
+////                self.question = items
+////            }
+////        }
+////
+////        catch let DecodingError.dataCorrupted(context) {
+////            print(context)
+////        } catch let DecodingError.keyNotFound(key, context) {
+////            print("Key '\(key)' not found:", context.debugDescription)
+////            print("codingPath:", context.codingPath)
+////        } catch let DecodingError.valueNotFound(value, context) {
+////            print("Value '\(value)' not found:", context.debugDescription)
+////            print("codingPath:", context.codingPath)
+////        } catch let DecodingError.typeMismatch(type, context)  {
+////            print("Type '\(type)' mismatch:", context.debugDescription)
+////            print("codingPath:", context.codingPath)
+////        } catch {
+////            print("error: ", error)
+////        }
+////    }
+////}
