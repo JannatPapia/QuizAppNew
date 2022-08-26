@@ -60,8 +60,8 @@ struct HomeView: View {
             }
             .background(Color.black.opacity(0.05).ignoresSafeArea())
             .onAppear{
-                nazmul()
                 //load json data here. ....... 1st
+                apiCall()
             
             }
             .fullScreenCover(isPresented: $show, content: {
@@ -70,7 +70,7 @@ struct HomeView: View {
         }
     }
     
-    func nazmul() {
+    func apiCall() {
     
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {
@@ -78,7 +78,7 @@ struct HomeView: View {
                 let _posts = try? JSONDecoder().decode([QuestionModel].self, from: data)
     
                 for item in _posts! {
-                    print(item.qustion)
+                    print(item.option1)
                 }
     
             } catch {
