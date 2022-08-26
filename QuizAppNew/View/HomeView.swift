@@ -60,6 +60,7 @@ struct HomeView: View {
             }
             .background(Color.black.opacity(0.05).ignoresSafeArea())
             .onAppear{
+                nazmul()
                 //load json data here. ....... 1st
             
             }
@@ -68,4 +69,24 @@ struct HomeView: View {
             })
         }
     }
+    
+    func nazmul() {
+    
+        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
+            do {
+                  let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let _posts = try? JSONDecoder().decode([QuestionModel].self, from: data)
+    
+                for item in _posts! {
+                    print(item.qustion)
+                }
+    
+            } catch {
+                   // handle error
+                  //      print("error")
+              }
+        }
+    }
+    
+    
 }
