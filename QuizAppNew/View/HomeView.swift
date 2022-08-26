@@ -61,7 +61,7 @@ struct HomeView: View {
             .background(Color.black.opacity(0.05).ignoresSafeArea())
             .onAppear{
                 //load json data here. ....... 1st
-                apiCall()
+                loadData()
             
             }
             .fullScreenCover(isPresented: $show, content: {
@@ -70,7 +70,7 @@ struct HomeView: View {
         }
     }
     
-    func apiCall() {
+    func loadData() {
     
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do {
