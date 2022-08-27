@@ -83,7 +83,8 @@ struct HomeView: View {
     
             } catch {
                    // handle error
-                  //      print("error")
+                   //     print("error")
+                print(error)
               }
         }
     }
