@@ -73,7 +73,7 @@ struct HomeView: View {
     func loadData() {
     
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
-            do {
+            do { // this part is right here if the catch was successful
                   let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
                 let _posts = try? JSONDecoder().decode([QuestionModel].self, from: data)
     
@@ -81,10 +81,10 @@ struct HomeView: View {
                     print(item.option1)
                 }
     
-            } catch {
-                   // handle error
-                   //     print("error")
-                print(error)
+            } catch { // and whats in the catch block is if it was unsuccessful
+                   // handle the error
+                        print("not data found")
+              //  print(error.localizedDescription)
               }
         }
     }

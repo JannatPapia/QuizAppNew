@@ -102,7 +102,7 @@
         "sl": 10,
         "category": "Road sign",
         "qustion": "This sign means?",
-        "option1": "2 Lane traffic ahead.",
+        "opion1": "2 Lane traffic ahead.",
         "option2": "Merging traffic entering from the left.",
         "option3": "Right curve warning ahead.",
         "option4": "Merging traffic entering from the right.",
