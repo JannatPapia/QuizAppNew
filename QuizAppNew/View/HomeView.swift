@@ -9,7 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @State var show = false
-    
+ //   @StateObject var viewModel : QuestionModel //create instance for questionViewModel
     var body: some View {
         ZStack {
             VStack{
@@ -59,9 +59,35 @@ struct HomeView: View {
                 Spacer(minLength: 0)
             }
             .background(Color.black.opacity(0.05).ignoresSafeArea())
+            .onAppear{
+                //load json data here. ....... 1st
+                loadData()
+            
+            }
             .fullScreenCover(isPresented: $show, content: {
                 QAview()
             })
         }
     }
+    
+    func loadData() {
+    
+        if let path = Bundle.main.path(forResource: "data", ofType: "json") {
+            do { // this part is right here if the catch was successful
+                  let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
+                let _posts = try JSONDecoder().decode([QuestionModel].self, from: data)
+    
+                for item in _posts {
+                    print(item.option1)
+                }
+    
+            } catch { // and whats in the catch block is if it was unsuccessful
+                   // handle the error
+                        print("not data found")
+              //  print(error.localizedDescription)
+              }
+        }
+    }
+    
+    
 }

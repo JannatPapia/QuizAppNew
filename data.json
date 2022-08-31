@@ -1,0 +1,112 @@
+[
+    {
+        "sl": 1,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "No passing allowed.",
+        "option2": "No playing in the street.",
+        "option3": "No parking allowed.",
+        "option4": "No pedestrian traffic.",
+        "answer": "No parking allowed.",
+        "image": "sign1"
+    },
+    {
+        "sl": 2,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "Left lane ends.",
+        "option2": "No left lane.",
+        "option3": "U-turn is prohibited.",
+        "option4": "No left turn.",
+        "answer": "U-turn is prohibited.",
+        "image": "sign2"
+    },
+    {
+        "sl": 3,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "Warning sign for hill ahead.",
+        "option2": "No trucks warning sign.",
+        "option3": "Warning sign for draw bridge ahead.",
+        "option4": "Warning sign for truck ramp.",
+        "answer": "Warning sign for hill ahead.",
+        "image": "sign3"
+    },
+    {
+        "sl": 4,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "Pedestrian crossing ahead.",
+        "option2": "Road workers are in or near the roadway.",
+        "option3": "Road construction flagger ahead.",
+        "option4": "Snow removal ahead.",
+        "answer": "Road construction flagger ahead.",
+        "image": "sign4"
+    },
+    {
+        "sl": 5,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "Forward traffic is not allowed.",
+        "option2": "Warning that a stop sign is ahead.",
+        "option3": "A warning to stop right away.",
+        "option4": "Wrong way, do not enter.",
+        "answer": "Warning that a stop sign is ahead.",
+        "image": "sign5"
+    },
+    {
+        "sl": 6,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "A sharp right curve or turn.",
+        "option2": "2 Lane traffic ahead.",
+        "option3": "V intersection ahead.",
+        "option4": "A sharp left curve warning.",
+        "answer": "A sharp right curve or turn.",
+        "image": "sign6"
+    },
+    {
+        "sl": 7,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "End of road construction.",
+        "option2": "Road construction detour to the left.",
+        "option3": "A flagger is stationed ahead to control road users.",
+        "option4": "Road construction detour to the right.",
+        "answer": "A flagger is stationed ahead to control road users.",
+        "image": "sign7"
+    },
+    {
+        "sl": 8,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "Divided highway begins.",
+        "option2": "Two-way traffic ahead.",
+        "option3": "One-way traffic ahead.",
+        "option4": "Divided highway ends.",
+        "answer": "Two-way traffic ahead.",
+        "image": "sign8"
+    },
+    {
+        "sl": 9,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "option1": "Narrow bridge warning.",
+        "option2": "Soft shoulder warning.",
+        "option3": "Left lane ends ahead.",
+        "option4": "Merging traffic from the right.",
+        "answer": "Narrow bridge warning.",
+        "image": "sign9"
+    },
+    {
+        "sl": 10,
+        "category": "Road sign",
+        "qustion": "This sign means?",
+        "opion1": "2 Lane traffic ahead.",
+        "option2": "Merging traffic entering from the left.",
+        "option3": "Right curve warning ahead.",
+        "option4": "Merging traffic entering from the right.",
+        "answer": "Merging traffic entering from the right.",
+        "image": "sign10"
+    }
+]
