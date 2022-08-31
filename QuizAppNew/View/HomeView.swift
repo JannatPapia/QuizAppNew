@@ -75,9 +75,9 @@ struct HomeView: View {
         if let path = Bundle.main.path(forResource: "data", ofType: "json") {
             do { // this part is right here if the catch was successful
                   let data = try Data(contentsOf: URL(fileURLWithPath: path), options: .mappedIfSafe)
-                let _posts = try? JSONDecoder().decode([QuestionModel].self, from: data)
+                let _posts = try JSONDecoder().decode([QuestionModel].self, from: data)
     
-                for item in _posts! {
+                for item in _posts {
                     print(item.option1)
                 }
     
